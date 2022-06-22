@@ -12,13 +12,14 @@ Pod::Spec.new do |s|
   # 库的作者
   s.author = { "DDYFFmpeg" => "634778311@qq.com" }
   # 项目的地址
-  s.source = { :git => "https://github.com/starainDou/DDYFFmpeg.git" }
+  s.source = { :git => "", :tag => s.version}
   # 支持的平台及版本
-  s.platform = :ios, "12.0"
+  # s.platform = :ios, '12.0'
+  s.ios.deployment_target = '12.0'
   # 是否使用ARC，如果指定具体文件，则具体的问题使用ARC
   s.requires_arc = true
   s.libraries = 'z', 'bz2', 'c++', 'iconv'
   s.frameworks = 'AudioToolbox','AVFoundation','CoreMedia','VideoToolbox'
-  s.vendored_frameworks = '*.framework'
+  s.vendored_frameworks = 'DDYFFmpeg/*.xcframework'
 
 end
